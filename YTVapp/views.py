@@ -17,10 +17,10 @@ def index(request):
 				# set video resolution
 				stream = video.streams.get_highest_resolution()
 
-				# DOWNLOAD_FOLDER = "d:/youtube_download/"
+				DOWNLOAD_FOLDER = "d:/"
 				
 				# download the video 
-				stream.download(down_link)
+				stream.download(DOWNLOAD_FOLDER)
 
 				# render HTML page
 				return render(request, 'index.html', {'msg':'Video downloaded'})
